@@ -1,0 +1,23 @@
+syntax = "proto3";
+package VgolzRkrqkFeknpHueBOuFardMeHzedy;
+
+service Model {
+  rpc init_model_data (InitModelDataIn) returns (InitModelDataOut);
+  rpc classify (ClassifyIn) returns (ClassifyOut);
+}
+
+message InitModelDataIn {
+  string text = 1;
+}
+
+message InitModelDataOut {
+  string value = 1;
+}
+
+message ClassifyIn {
+  repeated double img_list = 1;
+}
+
+message ClassifyOut {
+  repeated double value = 1;
+}
